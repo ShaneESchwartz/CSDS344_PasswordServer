@@ -20,6 +20,9 @@ public class Password {
         this.user = user;
     }
 
+    public Password() {
+    }
+
     public Long getId() {
         return id;
     }
