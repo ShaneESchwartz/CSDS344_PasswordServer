@@ -19,18 +19,10 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-//    @PostMapping
-//    public void createUser(@RequestBody User user) {
-//        userRepository.save(user);
-//    }
 @PostMapping
     public ResponseEntity<Void> createUser(@RequestBody User user) {
         userRepository.save(user);
         return ResponseEntity.status(201).build();
     }
-//    @GetMapping
-//    public List<User> getUsers() {
-//        return userRepository.findAll();
-//    }
 
 }
