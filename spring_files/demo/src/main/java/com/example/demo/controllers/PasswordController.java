@@ -24,7 +24,7 @@ public class PasswordController {
     public ResponseEntity<Void> savePasswords(@RequestBody Password password, Authentication authentication) {
         String username = authentication.getName();
         passwordService.savePassword(password, username);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(201).build();
     }
 
     @GetMapping("/passwords")
