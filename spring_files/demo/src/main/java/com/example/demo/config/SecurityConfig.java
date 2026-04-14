@@ -44,10 +44,10 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(CustomUserDetailsService service) {
-        return service;
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(CustomUserDetailsService service) {
+//        return service;
+//    }
     @Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();

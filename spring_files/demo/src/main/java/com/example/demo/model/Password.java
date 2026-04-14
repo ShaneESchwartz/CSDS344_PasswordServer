@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,7 +12,10 @@ public class Password {
     private String password;
 
     @ManyToOne
+    @JsonIgnore
     private User user;
+
+
 
     public Password(Long id, String label, String password, User user) {
         this.id = id;
