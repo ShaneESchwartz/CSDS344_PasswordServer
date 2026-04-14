@@ -8,6 +8,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PasswordRepository  extends JpaRepository<Password, Long> {
-    //Optional<User> findByUsername(String username);
     List<Password> findByUser(User user);
 }

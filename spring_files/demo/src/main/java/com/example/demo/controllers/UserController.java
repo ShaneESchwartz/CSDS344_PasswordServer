@@ -20,8 +20,6 @@ public class UserController {
 
     @PostMapping
     public void createUser(@RequestBody User user) {
-//        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-//        user.password = passwordEncoder.encode(user.password);
         userRepository.save(user);
     }
 

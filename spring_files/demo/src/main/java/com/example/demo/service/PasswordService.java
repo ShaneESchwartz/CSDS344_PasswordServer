@@ -24,13 +24,11 @@ public class PasswordService {
         User user = userRepository.findUserByUsername(username);
         password.setUser(user);
         passwordRepository.save(password);
-
    }
 
     public List<Password> getPasswords(String username) {
        User user = userRepository.findUserByUsername(username);
        return passwordRepository.findByUser(user);
-
    }
 
 }
